@@ -1,0 +1,71 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  color: #282c34;
+  position: relative;
+}
+
+/* Style for navigation menu */
+.navbar__menu {
+  opacity: 0;
+  transform: translateY(-20px);
+  visibility: hidden;
+  flex-direction: column;
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  background-color: #e4e4e4;
+  padding-top: 4rem;
+  width: 15rem;
+  height: 17rem;
+  border-radius: 0 0 1rem 0;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out, visibility 0s 0.2s;
+}
+
+/* When the hamburger menu is open */
+.navbar__menu--open {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+/* Navigation links */
+.navbar__menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar__menu ul li {
+  margin-bottom: 10px;
+}
+
+.navbar__menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar__menu ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styling for burger menu icon */
+@media (max-width: 768px) {
+  .navbar__menu {
+    display: none;
+  }
+
+  .navbar__menu--open {
+    display: flex;
+  }
+}
+
+li {
+  list-style-type: none;
+  padding: 1rem;
+}
